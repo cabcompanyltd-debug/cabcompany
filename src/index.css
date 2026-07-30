@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom Corporate Colors - New Brand Color System */
+  --color-brand-green: #059669;
+  --color-brand-green-dark: #047857;
+  --color-brand-green-forest: #047857;
+  --color-brand-green-light: #ECFDF5;
+  --color-brand-blue: #4169E1;
+  --color-brand-blue-sky: #EDF2FF;
+  --color-brand-blue-ocean: #2E52C7;
+  --color-brand-blue-aqua: #4169E1;
+  --color-brand-gold: #F5B942;
+  --color-brand-dark: #1A1A1A;
+}
+
+/* Custom Premium Global Styles */
+body {
+  font-family: var(--font-sans);
+  background-color: #F7F9FB;
+  color: var(--color-brand-dark);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Smooth glass effect */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Custom premium hover glowing effects */
+.glow-on-hover:hover {
+  box-shadow: 0 0 25px rgba(13, 148, 136, 0.25);
+  transform: translateY(-2px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scroll progress bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Scroll progress bar colors matching greenish-blueish theme */
+::-webkit-scrollbar-track {
+  background: #EEF3F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0D9488;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0F766E;
+}
