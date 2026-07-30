@@ -6,7 +6,6 @@
 import React from 'react';
 import { Award, ShieldCheck, Mail, ArrowLeft, ExternalLink, Calendar, Milestone } from 'lucide-react';
 import { TEAM } from '../data/mockData';
-import ceoImg from '../assets/staff/ceo.jpg';
 
 interface LeadershipViewProps {
   onNavigate: (view: string, params?: any) => void;
@@ -45,12 +44,12 @@ export default function LeadershipView({ onNavigate }: LeadershipViewProps) {
           <div className="lg:col-span-4 flex justify-center">
             <div className="relative group">
               <img 
-                src={ceoImg} 
+                src="/newstaff/christian.png" 
                 alt="Christian Asara Boafo" 
                 className="w-64 h-64 sm:w-72 sm:h-72 object-cover rounded-2xl border-4 border-brand-gold/20"
                 referrerPolicy="no-referrer"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/ceo.jpg';
+                  (e.currentTarget as HTMLImageElement).src = '/newstaff/christian.png';
                 }}
               />
               <div className="absolute -bottom-3 -right-3 bg-brand-gold text-brand-dark p-3.5 rounded-xl font-black text-xs shadow-lg font-mono">
@@ -100,7 +99,7 @@ export default function LeadershipView({ onNavigate }: LeadershipViewProps) {
                   onError={(e) => {
                     const target = e.currentTarget as HTMLImageElement;
                     const filename = director.image.split('/').pop() || '';
-                    target.src = '/ImageAssets/' + filename;
+                    target.src = '/newstaff/' + filename;
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />

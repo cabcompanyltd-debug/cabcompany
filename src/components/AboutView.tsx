@@ -165,7 +165,7 @@ export default function AboutView() {
                   onError={(e) => {
                     const target = e.currentTarget as HTMLImageElement;
                     const filename = member.image.split('/').pop() || '';
-                    target.src = '/ImageAssets/' + filename;
+                    target.src = '/newstaff/' + filename;
                   }}
                 />
               </div>

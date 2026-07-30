@@ -4,10 +4,6 @@
  */
 
 import { Product, Project, BlogArticle } from '../types';
-import ceoImg from '../assets/staff/ceo.jpg';
-import projectManagerImg from '../assets/staff/projectmanager.jpg';
-import managerImg from '../assets/staff/manager.jpg';
-import supervisorImg from '../assets/staff/supervisor.jpg';
 
 export const SERVICES = {
   agriculture: [
@@ -329,37 +325,37 @@ export const FAQS = [
 export const TEAM = [
   {
     name: 'Christian Asara Boafo',
-    role: 'Chief Executive Officer - CEO',
-    position: 'Chief Executive Officer - CEO',
-    image: ceoImg,
-    bio: 'Leading C.A.B Company Limited with vision and commitment to sustainable agriculture, pure mineral water production, and certified real estate development.',
+    role: 'CHIEF EXECUTIVE OFFICER - CEO',
+    position: 'CHIEF EXECUTIVE OFFICER - CEO',
+    image: '/newstaff/christian.png',
+    bio: 'Christian Asara Boafo is the visionary behind C.A.B Company Limited, leading with commitment to sustainable agriculture, pure mineral water production, and certified real estate development.',
     email: 'c.boafo@cabcompany.com',
     linkedin: 'https://linkedin.com'
   },
   {
     name: 'Devine Adade',
-    role: 'Project Manager',
-    position: 'Project Manager',
-    image: projectManagerImg,
-    bio: 'Overseeing all C.A.B Company projects to ensure timely delivery and quality across our agriculture, water, and real estate operations.',
+    role: 'PROJECT MANAGER',
+    position: 'PROJECT MANAGER',
+    image: '/newstaff/devine.png',
+    bio: 'Devine Adade leads the planning and execution of all C.A.B Company Limited projects to ensure timely delivery and quality across our agriculture, water, and real estate operations.',
     email: 'd.adade@cabcompany.com',
     linkedin: 'https://linkedin.com'
   },
   {
     name: 'Justice K Dzomeku',
-    role: 'Manager',
-    position: 'Manager',
-    image: managerImg,
-    bio: 'Managing daily operations and ensuring excellence across our agriculture, water production, and real estate divisions.',
+    role: 'MANAGER',
+    position: 'MANAGER',
+    image: '/newstaff/justice.png',
+    bio: 'Justice K Dzomeku oversees the day-to-day operations of C.A.B Company Limited, ensuring operational excellence across all departments.',
     email: 'j.dzomeku@cabcompany.com',
     linkedin: 'https://linkedin.com'
   },
   {
     name: 'Ama Serwaa Mensah',
-    role: 'Supervisor',
-    position: 'Supervisor',
-    image: supervisorImg,
-    bio: 'Supervising field and production teams to maintain C.A.B Company’s high standards of quality, safety, and excellence.',
+    role: 'SUPERVISOR',
+    position: 'SUPERVISOR',
+    image: '/newstaff/ama.png',
+    bio: 'Ama Serwaa Mensah supervises C.A.B Company Limited field and production teams to maintain high standards of quality, safety, and operational performance.',
     email: 'a.mensah@cabcompany.com',
     linkedin: 'https://linkedin.com'
   }
