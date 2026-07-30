@@ -49,6 +49,15 @@ export default function LeadershipView({ onNavigate }: LeadershipViewProps) {
                 loading="lazy"
                 className="w-72 h-72 sm:w-80 sm:h-80 object-cover object-top rounded-2xl border-4 border-brand-gold/30 shadow-xl"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget as HTMLImageElement;
+                  const step = Number(target.dataset.fallbackStep || '0');
+                  const fallbacks = ['/newstaff/christian.png', '/images/team/christian.png', '/christian.png', '/ImageAssets/christian.jpg', '/ImageAssets/ceo.jpg'];
+                  if (step < fallbacks.length) {
+                    target.dataset.fallbackStep = String(step + 1);
+                    target.src = fallbacks[step];
+                  }
+                }}
               />
               <div className="absolute -bottom-3 -right-3 bg-brand-gold text-brand-dark p-3.5 rounded-xl font-black text-xs shadow-lg font-mono">
                 CEO & FOUNDER
@@ -96,6 +105,28 @@ export default function LeadershipView({ onNavigate }: LeadershipViewProps) {
                     loading="lazy"
                     className="w-full h-64 object-cover object-top rounded-t-2xl"
                     referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      const target = e.currentTarget as HTMLImageElement;
+                      const step = Number(target.dataset.fallbackStep || '0');
+                      const name = director.name.toLowerCase();
+                      let fallbacks: string[] = [];
+                      if (name.includes('christian')) {
+                        fallbacks = ['/newstaff/christian.png', '/images/team/christian.png', '/christian.png', '/ImageAssets/christian.jpg', '/ImageAssets/ceo.jpg'];
+                      } else if (name.includes('devine')) {
+                        fallbacks = ['/newstaff/devine.png', '/images/team/devine.png', '/devine.png', '/ImageAssets/devine.jpg', '/ImageAssets/projectmanager.jpg'];
+                      } else if (name.includes('justice')) {
+                        fallbacks = ['/newstaff/justice.png', '/images/team/justice.png', '/justice.png', '/ImageAssets/justice.jpg', '/ImageAssets/manager.jpg'];
+                      } else if (name.includes('ama')) {
+                        fallbacks = ['/newstaff/ama.png', '/images/team/ama.png', '/ama.png', '/ImageAssets/ama.jpg', '/ImageAssets/supervisor.jpg'];
+                      } else {
+                        const filename = (director.image || '').split('/').pop() || '';
+                        fallbacks = ['/newstaff/' + filename, '/' + filename];
+                      }
+                      if (step < fallbacks.length) {
+                        target.dataset.fallbackStep = String(step + 1);
+                        target.src = fallbacks[step];
+                      }
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#002366]/90 via-transparent to-transparent" />
                 </div>

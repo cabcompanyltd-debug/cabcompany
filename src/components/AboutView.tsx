@@ -163,6 +163,28 @@ export default function AboutView() {
                   loading="lazy"
                   className="w-full h-full object-cover object-top"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.currentTarget as HTMLImageElement;
+                    const step = Number(target.dataset.fallbackStep || '0');
+                    const name = member.name.toLowerCase();
+                    let fallbacks: string[] = [];
+                    if (name.includes('christian')) {
+                      fallbacks = ['/newstaff/christian.png', '/images/team/christian.png', '/christian.png', '/ImageAssets/christian.jpg', '/ImageAssets/ceo.jpg'];
+                    } else if (name.includes('devine')) {
+                      fallbacks = ['/newstaff/devine.png', '/images/team/devine.png', '/devine.png', '/ImageAssets/devine.jpg', '/ImageAssets/projectmanager.jpg'];
+                    } else if (name.includes('justice')) {
+                      fallbacks = ['/newstaff/justice.png', '/images/team/justice.png', '/justice.png', '/ImageAssets/justice.jpg', '/ImageAssets/manager.jpg'];
+                    } else if (name.includes('ama')) {
+                      fallbacks = ['/newstaff/ama.png', '/images/team/ama.png', '/ama.png', '/ImageAssets/ama.jpg', '/ImageAssets/supervisor.jpg'];
+                    } else {
+                      const filename = (member.image || '').split('/').pop() || '';
+                      fallbacks = ['/newstaff/' + filename, '/' + filename];
+                    }
+                    if (step < fallbacks.length) {
+                      target.dataset.fallbackStep = String(step + 1);
+                      target.src = fallbacks[step];
+                    }
+                  }}
                 />
               </div>
 
