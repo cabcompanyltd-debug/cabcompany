@@ -44,10 +44,13 @@ export default function LeadershipView({ onNavigate }: LeadershipViewProps) {
           <div className="lg:col-span-4 flex justify-center">
             <div className="relative group">
               <img 
-                src="/CEO.jpg" 
+                src="/ceo.jpg" 
                 alt="Christian Asara Boafo" 
                 className="w-64 h-64 sm:w-72 sm:h-72 object-cover rounded-2xl border-4 border-brand-gold/20"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = '/ImageAssets/ceo.jpg';
+                }}
               />
               <div className="absolute -bottom-3 -right-3 bg-brand-gold text-brand-dark p-3.5 rounded-xl font-black text-xs shadow-lg font-mono">
                 CEO & FOUNDER
@@ -93,6 +96,11 @@ export default function LeadershipView({ onNavigate }: LeadershipViewProps) {
                   alt={director.name} 
                   className="w-full h-full object-cover group-hover:scale-103 transition duration-500"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.currentTarget as HTMLImageElement;
+                    const filename = director.image.split('/').pop() || '';
+                    target.src = '/ImageAssets/' + filename;
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 

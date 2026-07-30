@@ -1,6 +1,6 @@
 {
-  "name": "C.A.B Company Ltd",
-  "description": "Enterprise website and client portal for C.A.B Company Ltd, a global leader in sustainable agriculture, modern farming, and industrial water purification.",
+  "name": "C.A.B Company Limited",
+  "description": "Enterprise website and client portal for C.A.B Company Limited, a leader in pure mineral water production, sustainable agriculture, and certified real estate development.",
   "requestFramePermissions": ["geolocation"],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

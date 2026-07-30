@@ -327,7 +327,7 @@ export const TEAM = [
     name: 'Christian Asara Boafo',
     role: 'Chief Executive Officer - CEO',
     position: 'Chief Executive Officer - CEO',
-    image: '/CEO.jpg',
+    image: '/ceo.jpg',
     bio: 'Leading C.A.B Company Limited with vision and commitment to sustainable agriculture, pure mineral water production, and certified real estate development.',
     email: 'c.boafo@cabcompany.com',
     linkedin: 'https://linkedin.com'
@@ -336,7 +336,7 @@ export const TEAM = [
     name: 'Devine Adade',
     role: 'Project Manager',
     position: 'Project Manager',
-    image: '/projectmanager.png',
+    image: '/projectmanager.jpg',
     bio: 'Overseeing all C.A.B Company projects to ensure timely delivery and quality across our agriculture, water, and real estate operations.',
     email: 'd.adade@cabcompany.com',
     linkedin: 'https://linkedin.com'
@@ -345,7 +345,7 @@ export const TEAM = [
     name: 'Justice K Dzomeku',
     role: 'Manager',
     position: 'Manager',
-    image: '/manager.png',
+    image: '/manager.jpg',
     bio: 'Managing daily operations and ensuring excellence across our agriculture, water production, and real estate divisions.',
     email: 'j.dzomeku@cabcompany.com',
     linkedin: 'https://linkedin.com'
@@ -354,7 +354,7 @@ export const TEAM = [
     name: 'Ama Serwaa Mensah',
     role: 'Supervisor',
     position: 'Supervisor',
-    image: '/Supervisor.png',
+    image: '/supervisor.jpg',
     bio: 'Supervising field and production teams to maintain C.A.B Company’s high standards of quality, safety, and excellence.',
     email: 'a.mensah@cabcompany.com',
     linkedin: 'https://linkedin.com'

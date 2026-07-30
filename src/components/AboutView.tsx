@@ -164,9 +164,8 @@ export default function AboutView() {
                   referrerPolicy="no-referrer"
                   onError={(e) => {
                     const target = e.currentTarget as HTMLImageElement;
-                    if (!target.src.includes('ImageAssets')) {
-                      target.src = '/ImageAssets' + member.image;
-                    }
+                    const filename = member.image.split('/').pop() || '';
+                    target.src = '/ImageAssets/' + filename;
                   }}
                 />
               </div>
