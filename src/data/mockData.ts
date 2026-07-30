@@ -4,6 +4,10 @@
  */
 
 import { Product, Project, BlogArticle } from '../types';
+import ceoImg from '../assets/staff/ceo.jpg';
+import projectManagerImg from '../assets/staff/projectmanager.jpg';
+import managerImg from '../assets/staff/manager.jpg';
+import supervisorImg from '../assets/staff/supervisor.jpg';
 
 export const SERVICES = {
   agriculture: [
@@ -327,7 +331,7 @@ export const TEAM = [
     name: 'Christian Asara Boafo',
     role: 'Chief Executive Officer - CEO',
     position: 'Chief Executive Officer - CEO',
-    image: '/ceo.jpg',
+    image: ceoImg,
     bio: 'Leading C.A.B Company Limited with vision and commitment to sustainable agriculture, pure mineral water production, and certified real estate development.',
     email: 'c.boafo@cabcompany.com',
     linkedin: 'https://linkedin.com'
@@ -336,7 +340,7 @@ export const TEAM = [
     name: 'Devine Adade',
     role: 'Project Manager',
     position: 'Project Manager',
-    image: '/projectmanager.jpg',
+    image: projectManagerImg,
     bio: 'Overseeing all C.A.B Company projects to ensure timely delivery and quality across our agriculture, water, and real estate operations.',
     email: 'd.adade@cabcompany.com',
     linkedin: 'https://linkedin.com'
@@ -345,7 +349,7 @@ export const TEAM = [
     name: 'Justice K Dzomeku',
     role: 'Manager',
     position: 'Manager',
-    image: '/manager.jpg',
+    image: managerImg,
     bio: 'Managing daily operations and ensuring excellence across our agriculture, water production, and real estate divisions.',
     email: 'j.dzomeku@cabcompany.com',
     linkedin: 'https://linkedin.com'
@@ -354,7 +358,7 @@ export const TEAM = [
     name: 'Ama Serwaa Mensah',
     role: 'Supervisor',
     position: 'Supervisor',
-    image: '/supervisor.jpg',
+    image: supervisorImg,
     bio: 'Supervising field and production teams to maintain C.A.B Company’s high standards of quality, safety, and excellence.',
     email: 'a.mensah@cabcompany.com',
     linkedin: 'https://linkedin.com'
