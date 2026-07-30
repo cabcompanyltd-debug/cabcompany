@@ -8,11 +8,7 @@
       "destination": "/api/index.ts"
     },
     {
-      "source": "/ImageAssets/(.*)",
-      "destination": "/ImageAssets/$1"
-    },
-    {
-      "source": "/(.*)",
+      "source": "/((?!assets/|ImageAssets/|.*\\..*).*)",
       "destination": "/index.html"
     }
   ]

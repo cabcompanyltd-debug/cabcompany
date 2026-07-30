@@ -149,18 +149,18 @@ export default function AboutView() {
           {TEAM.map((member, index) => (
             <motion.div 
               key={index} 
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white border-t-4 border-t-[#4169E1] border-x border-b border-gray-100 rounded-2xl shadow-md p-6 flex flex-col sm:flex-row gap-6 hover:-translate-y-2 hover:border-[#D4A017] hover:border-t-[#D4A017] transition-all duration-300 group"
+              transition={{ duration: 0.5 }}
+              className="bg-white border-t-4 border-t-[#4169E1] border-x border-b border-gray-100 rounded-2xl shadow-md p-6 flex flex-col sm:flex-row gap-6"
             >
               {/* Photo */}
               <div className="w-full sm:w-44 h-56 sm:h-auto flex-shrink-0 overflow-hidden rounded-xl bg-gray-50 border border-gray-100 relative">
                 <img 
                   src={member.image} 
                   alt={member.name} 
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300"
+                  className="w-full h-full object-cover object-top"
                   referrerPolicy="no-referrer"
                   onError={(e) => {
                     const target = e.currentTarget as HTMLImageElement;

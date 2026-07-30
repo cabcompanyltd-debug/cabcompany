@@ -95,7 +95,7 @@ export default function LeadershipView({ onNavigate }: LeadershipViewProps) {
                 <img 
                   src={director.image} 
                   alt={director.name} 
-                  className="w-full h-full object-cover group-hover:scale-103 transition duration-500"
+                  className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                   onError={(e) => {
                     const target = e.currentTarget as HTMLImageElement;
