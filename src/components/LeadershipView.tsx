@@ -46,10 +46,14 @@ export default function LeadershipView({ onNavigate }: LeadershipViewProps) {
               <img 
                 src="/newstaff/christian.png" 
                 alt="Christian Asara Boafo" 
-                className="w-64 h-64 sm:w-72 sm:h-72 object-cover rounded-2xl border-4 border-brand-gold/20"
+                className="w-72 h-72 sm:w-80 sm:h-80 object-cover object-top rounded-2xl border-4 border-brand-gold/30 shadow-xl"
                 referrerPolicy="no-referrer"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/newstaff/christian.png';
+                  const target = e.currentTarget as HTMLImageElement;
+                  if (!target.dataset.fallback) {
+                    target.dataset.fallback = 'true';
+                    target.src = '/christian.png';
+                  }
                 }}
               />
               <div className="absolute -bottom-3 -right-3 bg-brand-gold text-brand-dark p-3.5 rounded-xl font-black text-xs shadow-lg font-mono">
@@ -90,16 +94,19 @@ export default function LeadershipView({ onNavigate }: LeadershipViewProps) {
               key={idx} 
               className="bg-white border border-black/5 rounded-3xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition group"
             >
-              <div className="relative h-80 overflow-hidden bg-gray-50">
+              <div className="relative h-96 overflow-hidden bg-gray-100">
                 <img 
                   src={director.image} 
                   alt={director.name} 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                   referrerPolicy="no-referrer"
                   onError={(e) => {
                     const target = e.currentTarget as HTMLImageElement;
-                    const filename = director.image.split('/').pop() || '';
-                    target.src = '/newstaff/' + filename;
+                    if (!target.dataset.fallback) {
+                      target.dataset.fallback = 'true';
+                      const filename = director.image.split('/').pop() || '';
+                      target.src = '/' + filename;
+                    }
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />

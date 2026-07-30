@@ -156,7 +156,7 @@ export default function AboutView() {
               className="bg-white border-t-4 border-t-[#4169E1] border-x border-b border-gray-100 rounded-2xl shadow-md p-6 flex flex-col sm:flex-row gap-6"
             >
               {/* Photo */}
-              <div className="w-full sm:w-44 h-56 sm:h-auto flex-shrink-0 overflow-hidden rounded-xl bg-gray-50 border border-gray-100 relative">
+              <div className="w-full sm:w-60 h-72 sm:h-72 flex-shrink-0 overflow-hidden rounded-xl bg-gray-50 border border-gray-200 relative shadow-xs">
                 <img 
                   src={member.image} 
                   alt={member.name} 
@@ -164,8 +164,11 @@ export default function AboutView() {
                   referrerPolicy="no-referrer"
                   onError={(e) => {
                     const target = e.currentTarget as HTMLImageElement;
-                    const filename = member.image.split('/').pop() || '';
-                    target.src = '/newstaff/' + filename;
+                    if (!target.dataset.fallback) {
+                      target.dataset.fallback = 'true';
+                      const filename = member.image.split('/').pop() || '';
+                      target.src = '/' + filename;
+                    }
                   }}
                 />
               </div>
