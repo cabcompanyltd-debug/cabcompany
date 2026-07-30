@@ -160,16 +160,9 @@ export default function AboutView() {
                 <img 
                   src={member.image} 
                   alt={member.name} 
+                  loading="lazy"
                   className="w-full h-full object-cover object-top"
                   referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    const target = e.currentTarget as HTMLImageElement;
-                    if (!target.dataset.fallback) {
-                      target.dataset.fallback = 'true';
-                      const filename = member.image.split('/').pop() || '';
-                      target.src = '/' + filename;
-                    }
-                  }}
                 />
               </div>
 

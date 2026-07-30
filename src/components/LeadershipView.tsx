@@ -44,17 +44,11 @@ export default function LeadershipView({ onNavigate }: LeadershipViewProps) {
           <div className="lg:col-span-4 flex justify-center">
             <div className="relative group">
               <img 
-                src="/newstaff/christian.png" 
+                src="https://26nsj3zw.us-east.insforge.app/8a1ca896-f23b-427d-bab2-4f379cd69583" 
                 alt="Christian Asara Boafo" 
+                loading="lazy"
                 className="w-72 h-72 sm:w-80 sm:h-80 object-cover object-top rounded-2xl border-4 border-brand-gold/30 shadow-xl"
                 referrerPolicy="no-referrer"
-                onError={(e) => {
-                  const target = e.currentTarget as HTMLImageElement;
-                  if (!target.dataset.fallback) {
-                    target.dataset.fallback = 'true';
-                    target.src = '/christian.png';
-                  }
-                }}
               />
               <div className="absolute -bottom-3 -right-3 bg-brand-gold text-brand-dark p-3.5 rounded-xl font-black text-xs shadow-lg font-mono">
                 CEO & FOUNDER
@@ -92,46 +86,38 @@ export default function LeadershipView({ onNavigate }: LeadershipViewProps) {
           {TEAM.map((director, idx) => (
             <div 
               key={idx} 
-              className="bg-white border border-black/5 rounded-3xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition group"
+              className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition group"
             >
-              <div className="relative h-96 overflow-hidden bg-gray-100">
-                <img 
-                  src={director.image} 
-                  alt={director.name} 
-                  className="w-full h-full object-cover object-top"
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    const target = e.currentTarget as HTMLImageElement;
-                    if (!target.dataset.fallback) {
-                      target.dataset.fallback = 'true';
-                      const filename = director.image.split('/').pop() || '';
-                      target.src = '/' + filename;
-                    }
-                  }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                
-                <div className="absolute bottom-6 left-6 right-6">
+              <div>
+                <div className="relative h-64 overflow-hidden bg-[#002366]">
+                  <img 
+                    src={director.image} 
+                    alt={director.name} 
+                    loading="lazy"
+                    className="w-full h-64 object-cover object-top rounded-t-2xl"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#002366]/90 via-transparent to-transparent" />
+                </div>
+
+                <div className="bg-[#002366] p-4 text-white">
                   <h3 className="text-lg font-black text-white leading-tight">{director.name}</h3>
-                  <p className="text-xs text-brand-gold font-mono uppercase mt-1 tracking-wide">{director.role}</p>
+                  <p className="text-xs text-brand-gold font-mono font-bold uppercase mt-1 tracking-wider">{director.role}</p>
+                </div>
+
+                <div className="p-5 space-y-3">
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-medium">
+                    {director.bio}
+                  </p>
                 </div>
               </div>
 
-              <div className="p-6 space-y-4 flex-grow flex flex-col justify-between">
-                <p className="text-xs sm:text-sm text-brand-dark/70 leading-relaxed font-medium">
-                  {director.bio}
-                </p>
-
-                <div className="pt-4 border-t border-gray-100 flex justify-between items-center text-xs">
-                  <span className="font-mono text-brand-dark/45 font-black uppercase text-[10px]">Credential Profile</span>
-                  <div className="flex space-x-2">
-                    <span className="p-1 px-2.5 bg-gray-100 text-brand-dark rounded-md text-[10px] font-bold font-mono">
-                      {idx === 0 ? 'MD' : idx === 1 ? 'PhD' : idx === 2 ? 'Ing' : 'BA'}
-                    </span>
-                    <span className="p-1 px-2.5 bg-brand-green/10 text-brand-green rounded-md text-[10px] font-bold font-mono">
-                      ACTIVE
-                    </span>
-                  </div>
+              <div className="p-5 pt-0">
+                <div className="pt-3 border-t border-gray-100 flex justify-between items-center text-xs">
+                  <span className="font-mono text-gray-400 font-bold uppercase text-[10px]">C.A.B Executive</span>
+                  <span className="p-1 px-2.5 bg-emerald-50 text-emerald-700 rounded-md text-[10px] font-bold font-mono">
+                    VERIFIED
+                  </span>
                 </div>
               </div>
             </div>

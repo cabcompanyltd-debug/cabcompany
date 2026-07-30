@@ -327,8 +327,8 @@ export const TEAM = [
     name: 'Christian Asara Boafo',
     role: 'CHIEF EXECUTIVE OFFICER - CEO',
     position: 'CHIEF EXECUTIVE OFFICER - CEO',
-    image: '/newstaff/christian.png',
-    bio: 'Christian Asara Boafo is the visionary behind C.A.B Company Limited, leading with commitment to sustainable agriculture, pure mineral water production, and certified real estate development.',
+    image: 'https://26nsj3zw.us-east.insforge.app/8a1ca896-f23b-427d-bab2-4f379cd69583',
+    bio: 'Christian Asara Boafo is the visionary behind C.A.B Company Limited. With strong leadership and strategic direction, he drives growth, innovation, and partnerships across all company operations.',
     email: 'c.boafo@cabcompany.com',
     linkedin: 'https://linkedin.com'
   },
@@ -336,8 +336,8 @@ export const TEAM = [
     name: 'Devine Adade',
     role: 'PROJECT MANAGER',
     position: 'PROJECT MANAGER',
-    image: '/newstaff/devine.png',
-    bio: 'Devine Adade leads the planning and execution of all C.A.B Company Limited projects to ensure timely delivery and quality across our agriculture, water, and real estate operations.',
+    image: 'https://26nsj3zw.us-east.insforge.app/07846ab9-ef71-4c68-9ffa-00fd295457ce',
+    bio: 'Devine Adade leads the planning and execution of all C.A.B Company Limited projects. He ensures timelines, budgets, and quality standards are met on every site.',
     email: 'd.adade@cabcompany.com',
     linkedin: 'https://linkedin.com'
   },
@@ -345,8 +345,8 @@ export const TEAM = [
     name: 'Justice K Dzomeku',
     role: 'MANAGER',
     position: 'MANAGER',
-    image: '/newstaff/justice.png',
-    bio: 'Justice K Dzomeku oversees the day-to-day operations of C.A.B Company Limited, ensuring operational excellence across all departments.',
+    image: 'https://26nsj3zw.us-east.insforge.app/9b190657-6ca9-4ace-9ba0-663ee608e532',
+    bio: 'Justice K Dzomeku oversees the day-to-day operations of C.A.B Company Limited. He coordinates teams and ensures smooth workflow across departments.',
     email: 'j.dzomeku@cabcompany.com',
     linkedin: 'https://linkedin.com'
   },
@@ -354,8 +354,8 @@ export const TEAM = [
     name: 'Ama Serwaa Mensah',
     role: 'SUPERVISOR',
     position: 'SUPERVISOR',
-    image: '/newstaff/ama.png',
-    bio: 'Ama Serwaa Mensah supervises C.A.B Company Limited field and production teams to maintain high standards of quality, safety, and operational performance.',
+    image: 'https://26nsj3zw.us-east.insforge.app/26f4ac12-cbf3-4301-aacd-6eaddeb21c81',
+    bio: 'Ama Serwaa Mensah supervises C.A.B Company Limited field and production teams. She ensures safety, discipline, and high performance on all projects.',
     email: 'a.mensah@cabcompany.com',
     linkedin: 'https://linkedin.com'
   }
